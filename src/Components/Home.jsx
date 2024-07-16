@@ -126,18 +126,21 @@ const Home = () => {
   if (error) return <ErrorPage />; // Show error page if there's an error
 
   return (
-    <section className="hom text-white min-h-screen">
+    <section className=" text-white min-h-screen">
       <div
-        className="banner bg-cover h-[700px] bg-center"
+        className="banner relative  bg-cover h-[600px] bg-center  "
         style={{
+          
           backgroundImage: upcomingMovies[0]
             ? `url(${imgUrl}/${upcomingMovies[0].backdrop_path})`
             : "none",
+            
         }}
-      >
-        <div className="banner-content container mx-auto py-44">
+      >      </div>
+
+        <div className="banner-content  px-20 m-auto  absolute top-0 text-white  mx-auto py-44 ">
           {upcomingMovies[0] && (
-            <>
+            <div className=" ">
               <h1 className="text-4xl font-bold mb-4">
                 {upcomingMovies[0].original_title}
               </h1>
@@ -150,10 +153,9 @@ const Home = () => {
                   <AiOutlinePlus className="mr-2" /> My List
                 </button>
               </div>
-            </>
+            </div>
           )}
         </div>
-      </div>
 
       <Row title={"Upcoming Movies"} arr={upcomingMovies} />
       <Row title={"Top Rated Movies"} arr={topRatedMovies} />
