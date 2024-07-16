@@ -128,7 +128,7 @@ const Home = () => {
   return (
     <section className=" text-white min-h-screen">
       <div
-        className="banner relative  bg-cover h-[600px] bg-center  "
+        className="banner relative  bg-cover h-[400px] bg-center  "
         style={{
           
           backgroundImage: upcomingMovies[0]
